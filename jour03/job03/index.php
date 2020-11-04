@@ -2,10 +2,8 @@
 
 $str='I\'m sorry Dave I\'m afraid I can\'t do that'; //on echappe l'apostrophe avec un antislash 
 $strlen=0;
-while(isset($str[$strlen])){       
-    $strlen++;                          
-}
-for($i=0; $i!=$strlen; $i++){    //on parcoure la chaine de caractere
+
+for($i=0; isset($str[$i]); $i++){    //on parcoure la chaine de caractere
     switch( $str[$i]){               //on utilise switch pour prendre en compte les 6 voyelles de l'alphabet
         case 'a':
         case 'e':

@@ -12,7 +12,13 @@ $dic=[
 $voyelles=0;
 $consonnes=0;
 $espaces=0;
-for($i=0; $i!=strlen($str); $i++){
+$strlen=0;
+
+while(isset($str[$strlen])){       
+    $strlen++;                          
+}
+
+for($i=0; $i!=$strlen; $i++){
     $j=0;
     while(!empty($dic['voyelles'][$j])){
         if($str[$i]==$dic['voyelles'][$j]){
@@ -25,10 +31,6 @@ for($i=0; $i!=strlen($str); $i++){
     }
 }
 
-$strlen=0;
-while(isset($str[$strlen])){       
-    $strlen++;                          
-}
 //Compte le nombre de consonnes de str
 $consonnes=$strlen-($voyelles+$espaces);
 
