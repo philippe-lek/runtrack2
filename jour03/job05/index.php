@@ -25,8 +25,12 @@ for($i=0; $i!=strlen($str); $i++){
     }
 }
 
+$strlen=0;
+while(isset($str[$strlen])){       
+    $strlen++;                          
+}
 //Compte le nombre de consonnes de str
-$consonnes=strlen($str)-($voyelles+$espaces);
+$consonnes=$strlen-($voyelles+$espaces);
 
 ?>
 

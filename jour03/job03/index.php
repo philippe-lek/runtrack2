@@ -1,8 +1,12 @@
 <?php
 
 $str='I\'m sorry Dave I\'m afraid I can\'t do that'; //on echappe l'apostrophe avec un antislash 
-for($i=0; $i!=strlen($str); $i++){    //on parcoure la chaine de caractere
-    switch( $strlow[$i]){               //on utilise switch pour prendre en compte les 6 voyelles de l'alphabet
+$strlen=0;
+while(isset($str[$strlen])){       
+    $strlen++;                          
+}
+for($i=0; $i!=$strlen; $i++){    //on parcoure la chaine de caractere
+    switch( $str[$i]){               //on utilise switch pour prendre en compte les 6 voyelles de l'alphabet
         case 'a':
         case 'e':
         case 'i':
