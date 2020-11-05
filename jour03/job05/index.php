@@ -1,34 +1,32 @@
 <?php
-//Creation d'une string str
+//Creation et initialisation d'une string str et son equivalent en minuscule
 $str='On n est pas le meilleur quand on le croit mais quand on le sait';    
 
-//Creation d'un tableau avec comme keys 'voyelles' et 'consonnes' initialise a 0
+//Creation d'un tableau multidimensionnel avec comme keys 'voyelles' et 'consonnes'
 $dic=[                          
-    'voyelles'=> 0,      
-    'consonnes'=> 0
+    'voyelles'=> ['a', 'e', 'i', 'o', 'u','y', 'A', 'E', 'I', 'O', 'U','Y'],      
+    'consonnes'=>['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'z']
 ];
 
-$voyelles='aeiouyAEIOUY';   //voyelles de test
-$nbrespaces=0;
-$strlen=0;
-
-while(isset($str[$strlen])){       
-    $strlen++;                          
-}
-
-for($i=0; isset($str[$i]); $i++){                      //on parcourt la string str
-    for($j=0; isset($voyelles[$j]); $j++){             //on parcourt la string voyelles
-        if($str[$i]==$voyelles[$j]){                   //on cherche les occurences de voyelles
-            $dic['voyelles']++;
+//Algorithme qui parcourt,compte et stocke le nombre de voyelles de str 
+$voyelles=0;
+$consonnes=0;
+$espaces=0;
+for($i=0; $i!=strlen($str); $i++){
+    $j=0;
+    while(!empty($dic['voyelles'][$j])){
+        if($str[$i]==$dic['voyelles'][$j]){
+            $voyelles++;
         }
+        $j++;
     }
     if($str[$i]==' '){
-        $nbrespaces++;                                 //on compte le nombre d'espaces
+        $espaces++;             //compte le nombre d'espaces
     }
 }
 
 //Compte le nombre de consonnes de str
-$dic['consonnes']=$strlen-($dic['voyelles']+$nbrespaces);
+$consonnes=strlen($str)-($voyelles+$espaces);
 
 ?>
 
@@ -43,8 +41,8 @@ $dic['consonnes']=$strlen-($dic['voyelles']+$nbrespaces);
         <tbody>
             <tr>
                 <?php
-                    echo '<td>'.$dic['voyelles'].'</td>';
-                    echo '<td>'.$dic['consonnes'].'</td>';
+                    echo '<td>'.$voyelles.'</td>';
+                    echo '<td>'.$consonnes.'</td>';
                 ?>
             </tr>
         </tbody>
