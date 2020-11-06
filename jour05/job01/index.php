@@ -1,7 +1,7 @@
 <?php
 
 //creation de la fonction
-function hello(){
+function hello(){                       
     echo 'Hello LaPlateforme!<br>';
 }
 

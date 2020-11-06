@@ -13,7 +13,7 @@ function occurences(string $str, $char){
     if(mystrlen($char)==1){
         for($i=0; isset($str[$i]); $i++){
             if($str[$i]==$char){
-                $nbr++;
+                $nbr++;             //compte le nombre d'occurence
             }
         }
         return ($nbr);

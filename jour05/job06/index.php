@@ -6,7 +6,7 @@ function leetspeak(string $str){
             case 'A':
             case 'a':
                 $str[$i]=4;
-            break;
+            break;              //sort de la condition
             case 'B':
             case 'b':
                 $str[$i]=8;
