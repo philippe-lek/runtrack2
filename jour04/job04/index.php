@@ -2,7 +2,7 @@
     Name: <input type="text" name="name"><br>
     E-mail: <input type="text" name="email"><br>
     First name: <input type="text" name="fname">
-    <input type="submit">
+    <input type="submit" name="submit">
 </form>
 
 <table>
