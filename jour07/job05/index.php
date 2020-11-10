@@ -7,8 +7,6 @@ if(isset($_GET['reset'])){
 if(empty($_GET)){
     $_SESSION['tour']=0;
 }
-var_dump($_SESSION['tour'].'<br>');
-var_dump($_GET);
 if (!isset($_SESSION['string'])){
     $_SESSION['string']='---------';
 }
